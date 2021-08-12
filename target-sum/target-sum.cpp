@@ -12,6 +12,7 @@ public:
             else return 0;
         }        
         if(dp[{i,s}].v!=-1) return dp[{i,s}].v;
+        
         int ans = count(i+1,s+ar[i],dp) + count(i+1,s-ar[i],dp);
         return dp[{i,s}].v = ans;
     }
